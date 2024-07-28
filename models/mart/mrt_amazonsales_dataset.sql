@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with mrt_amazonsales_dataset as
+with mrt_amazonsales_dataset_summary as
 (
     select 
         a.region,
@@ -17,4 +17,4 @@ with mrt_amazonsales_dataset as
     group by all
 )
 
-select * from mrt_amazonsales_dataset
+select * from mrt_amazonsales_dataset_summary
